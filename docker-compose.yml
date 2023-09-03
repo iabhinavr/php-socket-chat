@@ -1,0 +1,18 @@
+version: '3'
+services:
+    web:
+        image: nginx:1.25.2-alpine3.18
+        ports:
+            - "8900:80"
+            - "8910:8910"
+        volumes:
+            - ./conf.d:/etc/nginx/conf.d
+            - ./app:/app
+        restart: always
+    php:
+        build:
+            context: .
+            dockerfile: PHP.Dockerfile
+        volumes:
+            - ./app:/app
+        restart: always

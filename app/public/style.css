@@ -1,0 +1,81 @@
+
+* {
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chat-container {
+    position: relative;
+}
+
+.messages {
+    height: 300px;
+    width: 500px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    padding: 1em;
+    overflow: scroll;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+button {
+    display: block;
+    background: rgb(39, 112, 215);
+    padding: 5px;
+    margin: 5px 0;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    color: white;
+}
+form.msg-form {
+    bottom: 1em;
+    right: 1em;
+    left: 1em;
+}
+form.close-form button {
+    background: transparent;
+    border: 1px solid rgb(237, 102, 102);
+    color: black;
+    border-radius: 5px;
+}
+.hidden {
+    display: none;
+}
+
+.msg {
+    margin-bottom: 5px;
+}
+.msg-text {
+    padding: 5px;
+    display: inline-block;
+    border-radius: 5px;
+}
+.msg-normal .msg-text {
+    background:rgb(39, 112, 215);
+    color: white;
+}
+
+.msg-notification .msg-text,
+.msg-join .msg-text,
+.msg-left .msg-text {
+    background: #eee;
+    border: 1px solid #ccc;
+}
+
+.msg-notification .msg-sender,
+.msg-join .msg-sender, 
+.msg-left .msg-sender {
+    display: none;
+}
